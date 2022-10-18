@@ -1,0 +1,9 @@
+<html xmlns:th="https://thymeleaf.org">  
+<head><title>Spring 5 Web MVC Example</title></head>
+<body align="center">
+<h1>Welcome User</h1>
+ <form th:method="post" th:action="@{/logout}">
+<h3><input name="logout" type="submit" value="logout" /></h3>
+ </form>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">    
+
+<body align="center">
+    <h1>Sign Up Form</h1>
+ 
+   <div style="color:red; font-weight: bold; margin: 30px 0px;"><p th:text="${errorMessge}"></p></div>
+ 
+    <form th:method="post" th:object="${userDetailForm}" th:action="@{/signUpSubmit}">
+        <table align="center">
+            <tr>
+                <td>UserName:</td>
+                <td><input type='text' name='username' th:field="*{userName}" required="true"></td>
+            </tr>
+            <tr>
+                <td>City:</td>
+                <td><input type='text' name='city' th:field="*{city}"/></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type='password' name='password' th:field="*{password}" required="true"/></td>
+            </tr>
+            <tr>
+                 <td colspan='2'><input name="Add User" type="submit" value="Add User" /></td>
+            </tr>
+        </table>
+        
+    </form>
+</body>
+</html>
